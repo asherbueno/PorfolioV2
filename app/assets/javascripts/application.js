@@ -12,4 +12,14 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require jquery
+//= require bootstrap-sprockets
 //= require_tree .
+
+$(document).ready(function() {
+     $('.progress .progress-bar').css("width",
+               function() {
+                   return $(this).attr("aria-valuenow") + "%";
+               }
+       )
+   });
